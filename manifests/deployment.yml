@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: alodhapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: alodhapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: alodhapipelinesjavascriptdocker 
+          image: kubernetesacraj.azurecr.io/alodhapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
